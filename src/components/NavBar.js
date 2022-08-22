@@ -54,8 +54,8 @@ export default function NavBar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <AppBar component="nav">
+    <Box sx={[{ display: "flex" }]}>
+      <AppBar component="nav" sx={{ backgroundColor: "#c7ddcc" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -67,11 +67,11 @@ export default function NavBar(props: Props) {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
+            variant="h4"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            sx={[{ flexGrow: 1, display: { xs: "none", sm: "block" } }]}
           >
-            MUI
+            Nayan Sharma
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
