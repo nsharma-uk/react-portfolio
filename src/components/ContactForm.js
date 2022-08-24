@@ -10,7 +10,7 @@ import Typography from "@mui/material/Typography";
 ////import Card from "@mui/material/Card";
 //import CardContent from "@mui/material/CardContent";
 
-//import contactImage from "../images/Contact.jpg";
+//import contact from "./contact.jpg";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -29,7 +29,7 @@ export const ContactForm = () => {
             width: "100%",
             height: "100%",
             //backgroundImage: { contactImage },
-            backgroundColor: "#abd699",
+            backgroundColor: "#c7ddcc; opacity: 0.8",
             //   backgroundSize: "cover",
             //   backgroundRepeat: "no-repeat",
             //   backgroundPosition: "center",
@@ -51,7 +51,7 @@ export const ContactForm = () => {
           justifyContent: "center",
           width: "100%",
           height: "100%",
-          background: "linear-gradient(to right, #abd699, #c7ddcc)",
+          background: "#c7ddcc; opacity: 0.8",
           border: "1px solid red",
         }}
       >
