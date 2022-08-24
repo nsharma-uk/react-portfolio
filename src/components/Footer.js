@@ -1,8 +1,6 @@
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 

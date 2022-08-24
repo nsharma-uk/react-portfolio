@@ -8,8 +8,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-// // import MenuItem from "@mui/material/MenuItem";
-// import MenuIcon from "@mui/icons-material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
@@ -23,7 +22,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["About", "Projects", "Contact"];
 
 export default function NavBar(props: Props) {
   const { window } = props;
@@ -36,7 +35,7 @@ export default function NavBar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Menu
       </Typography>
       <Divider />
       <List>
@@ -59,24 +58,30 @@ export default function NavBar(props: Props) {
       <AppBar component="nav" sx={{ backgroundColor: "#c7ddcc" }}>
         <Toolbar>
           <IconButton
-            color="inherit"
+            sx={{ color: "#16123f" }}
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "none" } }}
           >
-            {/* // <MenuIcon /> */}
+            <MenuIcon />
           </IconButton>
           <Typography
             variant="h4"
             component="div"
-            sx={[{ flexGrow: 1, display: { xs: "none", sm: "block" } }]}
+            sx={[
+              {
+                flexGrow: 1,
+                display: { xs: "none", sm: "block" },
+                color: "#16123f",
+              },
+            ]}
           >
             Nayan Sharma
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
+              <Button key={item} sx={{ color: "#16123f" }}>
                 {item}
               </Button>
             ))}
@@ -88,6 +93,7 @@ export default function NavBar(props: Props) {
           container={container}
           variant="temporary"
           open={mobileOpen}
+          PaperProps={{ style: { height: "40vh" } }}
           onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
@@ -97,15 +103,13 @@ export default function NavBar(props: Props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: "#c7ddcc",
+              color: "#16123f",
             },
           }}
         >
           {drawer}
         </Drawer>
-      </Box>
-      <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-        <Typography>About Me</Typography>
       </Box>
     </Box>
   );
