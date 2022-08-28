@@ -30,6 +30,8 @@ export const App = () => {
           ]}
         />
         <About />
+        <
+
         <ContactForm />
         <Footer />
       </Stack>
