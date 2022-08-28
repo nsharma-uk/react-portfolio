@@ -1,32 +1,34 @@
-import * as React from "react";
+import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
+//import { Container } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
+//import ListItem from "@mui/material/ListItem";
+//import ListItemButton from "@mui/material/ListItemButton";
+//import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-
-interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window?: () => Window;
-}
+import { NavLink } from "react-router-dom";
+//import Button from "@mui/material/Button";
+//
+// interface Props {
+//   /**
+//    * Injected by the documentation to work in an iframe.
+//    * You won't need it on your project.
+//    */
+//   window?: () => Window;
+// }
 
 const drawerWidth = 240;
-const navItems = ["About", "Projects", "Contact"];
+// const navItems = ["About", "Projects", "Contact"];
 
-export default function NavBar(props: Props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+export const NavBar = ({ navItems }) => {
+  //const { window } = props;
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -40,18 +42,19 @@ export default function NavBar(props: Props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
+          <NavLink
+            to={item.href}
+            className={({ isActive }) => (isActive ? "link-active" : "link")}
+          >
+            {item.label}
+          </NavLink>
         ))}
       </List>
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  // const container =
+  //   window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box sx={[{ display: "flex" }]}>
@@ -81,16 +84,20 @@ export default function NavBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#16123f" }}>
-                {item}
-              </Button>
+              <NavLink
+                to={item.href}
+                className={({ isActive }) =>
+                  isActive ? "link-active" : "link"
+                }
+              >
+                {item.label}
+              </NavLink>
             ))}
           </Box>
         </Toolbar>
       </AppBar>
       <Box component="nav">
         <Drawer
-          container={container}
           variant="temporary"
           open={mobileOpen}
           PaperProps={{ style: { height: "40vh" } }}
@@ -113,4 +120,4 @@ export default function NavBar(props: Props) {
       </Box>
     </Box>
   );
-}
+};
