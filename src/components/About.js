@@ -14,13 +14,12 @@ export const About = () => {
         alignItems: "center",
       }}
     >
-      <div></div>
       <Container>
         <Typography variant="h5" gutterBottom>
           Hi, I'm Nayan and I'm a full stack developer. I am a former teacher
           who wanted to pursue a new, fresh challenge, specifically a career in
-          web development. Currently, I am thoroughly enjoying learning a Full
-          Stack Web development bootcamp course at the Birmingham University.
+          web development. My technical skill set include MongoDB, Express.js,
+          React, Node.js, HTML5, CSS3, Javascript, MySQL and ApolloDB.
         </Typography>
       </Container>
     </Box>
