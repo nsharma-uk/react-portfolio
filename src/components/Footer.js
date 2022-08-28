@@ -14,15 +14,32 @@ export const Footer = () => {
     >
       <Container pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
         <Box textAlign="center">
-          <Link href="/" color="inherit">
+          <Link
+            href="https://github.com/nsharma-uk"
+            target="_blank"
+            color="inherit"
+            sx={{
+              pr: 4,
+            }}
+          >
             <GitHubIcon fontSize="large" />
           </Link>
-          <Link href="/" color="inherit">
+          <Link
+            href="https://linkedin.com/in/nsharma-uk"
+            target="_blank"
+            color="inherit"
+          >
             <LinkedInIcon fontSize="large" />
           </Link>
         </Box>
 
-        <Box textAlign="center">
+        <Box
+          textAlign="center"
+          sx={{
+            textAlign: "center",
+            mt: 3,
+          }}
+        >
           Created by Nayan Sharma &copy; {new Date().getFullYear()}
         </Box>
       </Container>
