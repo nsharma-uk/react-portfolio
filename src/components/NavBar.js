@@ -1,33 +1,23 @@
 import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-//import { Container } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-//import ListItem from "@mui/material/ListItem";
-//import ListItemButton from "@mui/material/ListItemButton";
-//import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { NavLink } from "react-router-dom";
-//import Button from "@mui/material/Button";
-//
-// interface Props {
-//   /**
-//    * Injected by the documentation to work in an iframe.
-//    * You won't need it on your project.
-//    */
-//   window?: () => Window;
-// }
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
 
 const drawerWidth = 240;
-// const navItems = ["About", "Projects", "Contact"];
 
 export const NavBar = ({ navItems }) => {
-  //const { window } = props;
+  const isMobile = useMediaQuery("(max-width:600px)");
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -37,34 +27,36 @@ export const NavBar = ({ navItems }) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        Menu
+        Nayan Sharma
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <NavLink
-            to={item.href}
-            className={({ isActive }) => (isActive ? "link-active" : "link")}
-          >
-            {item.label}
-          </NavLink>
+          <ListItem key={item.label} disablePadding>
+            <ListItemButton
+              sx={{
+                textAlign: "center",
+                color: "#16123f",
+                "&:hover": { color: "#75c9b7" },
+              }}
+              href={item.href}
+            >
+              <ListItemText primary={item.label} />
+            </ListItemButton>
+          </ListItem>
         ))}
       </List>
     </Box>
   );
-
-  // const container =
-  //   window !== undefined ? () => window().document.body : undefined;
-
   return (
-    <Box sx={[{ display: "flex" }]}>
+    <Box sx={{ display: "flex" }}>
       <AppBar component="nav" sx={{ backgroundColor: "#c7ddcc" }}>
         <Toolbar>
           <IconButton
-            sx={{ color: "#16123f" }}
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: "none" }, color: "#16123f" }}
           >
             <MenuIcon />
           </IconButton>
@@ -83,14 +75,9 @@ export const NavBar = ({ navItems }) => {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <NavLink
-                to={item.href}
-                className={({ isActive }) =>
-                  isActive ? "link-active" : "link"
-                }
-              >
+              <Button key={item.label} sx={{ color: "#fff" }} href={item.href}>
                 {item.label}
-              </NavLink>
+              </Button>
             ))}
           </Box>
         </Toolbar>
@@ -102,7 +89,7 @@ export const NavBar = ({ navItems }) => {
           PaperProps={{ style: { height: "40vh" } }}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },
@@ -113,6 +100,7 @@ export const NavBar = ({ navItems }) => {
               color: "#16123f",
             },
           }}
+          anchor="top"
         >
           {drawer}
         </Drawer>

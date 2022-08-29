@@ -75,6 +75,7 @@ export const ContactForm = () => {
         />
         <TextField
           label="Email"
+          type="email"
           fullWidth
           autocomplete="none"
           sx={{
