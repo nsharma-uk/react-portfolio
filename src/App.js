@@ -3,11 +3,12 @@ import { HashRouter as Router } from "react-router-dom";
 import { ContactForm } from "./components/ContactForm";
 
 import { Footer } from "./components/Footer";
-import { About } from "./components/About";
+//import { About } from "./components/About";
 
-//import { NavLink } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 import { NavBar } from "./components/NavBar";
+//import { ProjectCards } from "./components/ProjectCards";
+import { AppRoutes } from "./AppRoutes";
 
 export const App = () => {
   return (
@@ -29,9 +30,7 @@ export const App = () => {
             },
           ]}
         />
-        <About />
-        <
-
+        <AppRoutes />
         <ContactForm />
         <Footer />
       </Stack>

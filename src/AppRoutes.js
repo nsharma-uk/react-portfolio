@@ -1,15 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 
-import { AboutMe } from "./components/About";
-import { Projects } from "./containers/Projects";
+import { About } from "./components/About";
+import { ProjectCards } from "./components/ProjectCards";
 import { ContactForm } from "./components/ContactForm";
 
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/*" element={<AboutMe />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/contact" element={<ContactForm />} />
+      <Route path="/*" element={<About />} />
+      <Route path="/projects" element={<ProjectCards />} />
+      <Route path="/contactform" element={<ContactForm />} />
     </Routes>
   );
 };

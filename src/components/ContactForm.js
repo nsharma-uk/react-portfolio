@@ -1,14 +1,10 @@
 import * as React from "react";
-//import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-//import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
-//import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-////import Card from "@mui/material/Card";
-//import CardContent from "@mui/material/CardContent";
+// import emailjs from "@emailjs/browser";
+import useRef from "react";
 
 //import contact from "./contact.jpg";
 
@@ -21,81 +17,102 @@ import Typography from "@mui/material/Typography";
 // }));
 
 export const ContactForm = () => {
+  //const form = useRef();
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       "service_88u91yd",
+  //       "template_nnfmrx5",
+  //       form.current,
+  //       "5ve9E7Qxzb3mA--_J"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         console.log("message sent");
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
+
   return (
-    <Grid container rowSpacing={0} columnSpacing={0}>
-      <Grid item xs={6}>
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            //backgroundImage: { contactImage },
-            backgroundColor: "#c7ddcc; opacity: 0.8",
-            //   backgroundSize: "cover",
-            //   backgroundRepeat: "no-repeat",
-            //   backgroundPosition: "center",
-            border: "1px solid red",
-          }}
-        >
-          <Typography component="h1" variant="h4" align="center">
-            Contact
-          </Typography>
-        </Box>
-      </Grid>
-      <Grid
-        item
-        xs={6}
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        height: "100%",
+        background: "#c7ddcc; opacity: 0.8",
+      }}
+    >
+      <Box>
+        <Typography component="h6" variant="h6" align="center">
+          Send me a message using the form or contact me using the links in the
+          footer
+        </Typography>
+      </Box>
+      <Box
+        component="form"
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-          height: "100%",
-          background: "#c7ddcc; opacity: 0.8",
-          border: "1px solid red",
+          p: 3,
         }}
+        // onSubmit={handleSubmit}
+        // ref={form}
       >
+        <TextField
+          label="Full Name"
+          fullWidth
+          autocomplete="none"
+          sx={{
+            p: 1,
+          }}
+        />
+        <TextField
+          label="Email"
+          fullWidth
+          autocomplete="none"
+          sx={{
+            p: 1,
+          }}
+        />
+        <TextField
+          label="Message"
+          multiline
+          rows={5}
+          autocomplete="none"
+          fullWidth
+          sx={{
+            p: 1,
+          }}
+        />
         <Box
           sx={{
-            border: "1px solid red",
+            alignItems: "center",
+            justifyContent: "center",
+            border: "1px red",
           }}
         >
-          <Box
-            component="form"
+          <Button
+            variant="contained"
+            type="submit"
             sx={{
-              p: 3,
+              fontWeight: 100,
+              backgroundColor: "#ffe26a",
+              color: "#16123f",
+              "&:hover": { backgroundColor: "#75c9b7" },
             }}
           >
-            <TextField
-              label="Full Name"
-              fullWidth
-              autocomplete="none"
-              sx={{
-                p: 1,
-              }}
-            />
-            <TextField
-              label="Email"
-              fullWidth
-              autocomplete="none"
-              sx={{
-                p: 1,
-              }}
-            />
-            <TextField
-              label="Message"
-              multiline
-              rows={5}
-              autocomplete="none"
-              fullWidth
-              sx={{
-                p: 1,
-              }}
-            />
-            <Button type="submit">Submit</Button>
-          </Box>
+            {/* {" "} */}
+            Submit
+          </Button>
         </Box>
-      </Grid>
-    </Grid>
+      </Box>
+    </Box>
   );
 };
