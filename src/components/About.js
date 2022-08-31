@@ -7,7 +7,7 @@ export const About = () => {
     <Box
       sx={{
         backgroundColor: "#75c9b7",
-        width: "100vw",
+        width: "100%",
         height: "100vh",
         display: "flex",
         justifyContent: "center",

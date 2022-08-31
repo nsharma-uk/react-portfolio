@@ -7,9 +7,9 @@ import { Footer } from "./components/Footer";
 
 import Stack from "@mui/material/Stack";
 import { NavBar } from "./components/NavBar";
-//import { ProjectCards } from "./components/ProjectCards";
-import { AppRoutes } from "./AppRoutes";
 import { ProjectCards } from "./components/ProjectCards";
+import { AppRoutes } from "./AppRoutes";
+//import { ProjectCards } from "./containers/ProjectCards";
 // import { ProjectCard } from "./components/ProjectCard";
 
 export const App = () => {
@@ -33,7 +33,6 @@ export const App = () => {
           ]}
         />
         <AppRoutes />
-        {/* <ProjectCard /> */}
         <ProjectCards />
         <ContactForm />
         <Footer />

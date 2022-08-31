@@ -11,6 +11,7 @@ export const Footer = () => {
       py={{ xs: 5, sm: 5 }}
       bgcolor="text.secondary"
       color="white"
+      sx={{ display: "flex" }}
     >
       <Container pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
         <Box textAlign="center">
@@ -20,6 +21,7 @@ export const Footer = () => {
             color="inherit"
             sx={{
               pr: 4,
+              "& :hover": { color: "#ffe26a" },
             }}
           >
             <GitHubIcon fontSize="large" />
@@ -28,6 +30,7 @@ export const Footer = () => {
             href="https://linkedin.com/in/nsharma-uk"
             target="_blank"
             color="inherit"
+            sx={{ "& :hover": { color: "#ffe26a" } }}
           >
             <LinkedInIcon fontSize="large" />
           </Link>

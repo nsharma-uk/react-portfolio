@@ -29,8 +29,8 @@ import Paper from "@mui/material/Paper";
 
 export const ContactForm = ({ isMobile }) => {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpenModal = () => setOpen(true);
+  const handleCloseModal = () => setOpen(false);
 
   const [error, setError] = useState();
 
@@ -54,7 +54,7 @@ export const ContactForm = ({ isMobile }) => {
       )
       .then(
         (result) => {
-          handleOpen();
+          handleOpenModal();
           console.log(result.text);
         },
         (error) => {
@@ -65,15 +65,17 @@ export const ContactForm = ({ isMobile }) => {
   };
 
   return (
-    <Paper sx={{ p: 3, minWidth: isMobile ? "90%" : "400px" }} elevation={6}>
-      <Dialog open={open} onClose={handleClose}>
+    <Paper sx={{ p: 3, minWidth: isMobile ? "100%" : "400px" }} elevation={6}>
+      <Dialog open={open} onClose={handleCloseModal}>
         <DialogTitle>Message sent</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Thank you. I will get back to you as soon as I can!
           </DialogContentText>
           <DialogActions>
-            <Button onClick={handleClose}>OK</Button>
+            <Button onClick={handleCloseModal} sx={{ alignItems: "center" }}>
+              OK
+            </Button>
           </DialogActions>
         </DialogContent>
       </Dialog>
@@ -91,7 +93,7 @@ export const ContactForm = ({ isMobile }) => {
         sx={{
           p: 3,
         }}
-        submitForm={handleSubmit(submitForm)}
+        // submitForm={handleSubmit(submitForm)}
         ref={form}
       >
         <Typography component="h6" variant="h6" align="center">
@@ -111,10 +113,7 @@ export const ContactForm = ({ isMobile }) => {
             label="Email"
             type="email"
             fullWidth
-            {...register("reply_to", {
-              required: true,
-            })}
-            autocomplete="none"
+            required
             sx={{
               p: 1,
             }}
@@ -122,6 +121,7 @@ export const ContactForm = ({ isMobile }) => {
           <TextField
             label="Message"
             multiline
+            required
             rows={5}
             fullWidth
             sx={{
@@ -132,6 +132,7 @@ export const ContactForm = ({ isMobile }) => {
 
         <Stack spacing={2}>
           <Button
+            onClick={handleSubmit(submitForm)}
             variant="contained"
             type="submit"
             sx={{
