@@ -36,7 +36,6 @@ export const ContactForm = ({ isMobile }) => {
 
   const {
     formState: { errors },
-    register,
     handleSubmit,
   } = useForm({
     mode: "onBlur",
@@ -65,7 +64,10 @@ export const ContactForm = ({ isMobile }) => {
   };
 
   return (
-    <Paper sx={{ p: 3, minWidth: isMobile ? "100%" : "400px" }} elevation={6}>
+    <Paper
+      sx={{ p: 3, minWidth: isMobile ? "100%" : "400px", color: "#abd699" }}
+      elevation={3}
+    >
       <Dialog open={open} onClose={handleCloseModal}>
         <DialogTitle>Message sent</DialogTitle>
         <DialogContent>
@@ -83,7 +85,7 @@ export const ContactForm = ({ isMobile }) => {
       {/* <Box sx={style}>
         
       </Box> */}
-      <Typography component="h4" variant="h4" align="center">
+      <Typography component="h4" variant="h4" align="center" fontWeight={600}>
         {" "}
         Contact Me
       </Typography>
@@ -136,9 +138,9 @@ export const ContactForm = ({ isMobile }) => {
             variant="contained"
             type="submit"
             sx={{
-              backgroundColor: "#ffe26a",
+              backgroundColor: "#abd699",
               color: "#16123f",
-              "&:hover": { backgroundColor: "#75c9b7" },
+              "&:hover": { backgroundColor: "#ffe26a" },
             }}
           >
             Send message
