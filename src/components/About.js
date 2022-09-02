@@ -1,8 +1,12 @@
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import me from "../Assets/images/avatar.jpg";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Avatar from "@mui/material/Avatar";
 
 import Box from "@mui/material/Box";
 export const About = () => {
+  const isMobile = useMediaQuery("(max-width:600px)");
   return (
     <Box
       sx={{
@@ -14,6 +18,15 @@ export const About = () => {
         alignItems: "center",
       }}
     >
+      <Avatar
+        alt="Nayan Sharma"
+        src={me}
+        sx={{
+          width: isMobile ? 190 : 300,
+          height: isMobile ? 190 : 300,
+          margin: 10,
+        }}
+      />
       <Container>
         <Typography variant="h5" gutterBottom>
           Hi, I'm Nayan and I'm a full stack developer. I am a former teacher

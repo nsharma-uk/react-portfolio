@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+//import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const Footer = () => {
   return (
@@ -11,7 +12,7 @@ export const Footer = () => {
       py={{ xs: 5, sm: 5 }}
       bgcolor="text.secondary"
       color="white"
-      sx={{ display: "flex" }}
+      sx={{ display: "flex", width: "100%" }}
     >
       <Container pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
         <Box textAlign="center">

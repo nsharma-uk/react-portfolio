@@ -85,7 +85,7 @@ export const ProjectCard = ({ img, title, text, githubRepo, deployedPage }) => {
           image={img}
           alt={title}
         />
-        <CardContent>
+        {/* <CardContent>
           <Typography
             variant="body2"
             sx={{
@@ -95,7 +95,7 @@ export const ProjectCard = ({ img, title, text, githubRepo, deployedPage }) => {
           >
             {text}
           </Typography>
-        </CardContent>
+        </CardContent> */}
         <Divider />
         <Grid
           container
