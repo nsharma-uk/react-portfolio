@@ -8,8 +8,8 @@ export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/*" element={<About />} />
-      <Route path="/projects" element={<ProjectCards />} />
-      <Route path="/contactform" element={<ContactForm />} />
+      <Route path="/project" element={<ProjectCards />} />
+      <Route path="/contact" element={<ContactForm />} />
     </Routes>
   );
 };
