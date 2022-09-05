@@ -9,13 +9,14 @@ export const ProjectCards = () => {
   const projects = ProjectCardInfo;
 
   return (
-    <Box sx={{ backgroundColor: "#abd699", textAlign: "center" }}>
-      <Box
-        sx={{ textAlign: "center" }}
-        component="h4"
-        variant="h4"
-        align="center"
-      >
+    <Box
+      sx={{
+        paddingTop: "50px",
+        backgroundColor: "#abd699",
+        textAlign: "center",
+      }}
+    >
+      <Box sx={{ textAlign: "center" }} variant="h4" align="center">
         <Typography
           component="h4"
           variant="h3"

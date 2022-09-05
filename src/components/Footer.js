@@ -10,7 +10,7 @@ export const Footer = () => {
     <Box
       px={{ xs: 3, sm: 5 }}
       py={{ xs: 5, sm: 5 }}
-      bgcolor="text.secondary"
+      bgcolor="#c7ddcc"
       color="white"
       sx={{ display: "flex", width: "100%" }}
     >

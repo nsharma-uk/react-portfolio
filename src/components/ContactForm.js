@@ -36,6 +36,7 @@ export const ContactForm = ({ isMobile }) => {
 
   const {
     formState: { errors },
+    register,
     handleSubmit,
   } = useForm({
     mode: "onBlur",
@@ -85,7 +86,12 @@ export const ContactForm = ({ isMobile }) => {
       {/* <Box sx={style}>
         
       </Box> */}
-      <Typography component="h4" variant="h4" align="center" fontWeight={600}>
+      <Typography
+        component="h4"
+        align="center"
+        fontWeight={600}
+        sx={{ paddingTop: "50px" }}
+      >
         {" "}
         Contact Me
       </Typography>
@@ -104,14 +110,19 @@ export const ContactForm = ({ isMobile }) => {
         <Stack spacing={2}>
           <TextField
             label="Full Name"
+            error={!!errors.from_name}
             required
-            error={!!errors.firstName}
             fullWidth
             sx={{
               p: 1,
             }}
+            helperText={!!errors.from_name ? "Please enter a valid name." : ""}
+            {...register("from_name", {
+              required: true,
+            })}
           />
           <TextField
+            error={!!errors.email}
             label="Email"
             type="email"
             fullWidth
@@ -119,8 +130,13 @@ export const ContactForm = ({ isMobile }) => {
             sx={{
               p: 1,
             }}
+            helperText={!!errors.email ? "Please enter a valid email." : ""}
+            {...register("email", {
+              required: true,
+            })}
           />
           <TextField
+            error={!!errors.message}
             label="Message"
             multiline
             required
@@ -129,6 +145,10 @@ export const ContactForm = ({ isMobile }) => {
             sx={{
               p: 1,
             }}
+            helperText={!!errors.message ? "Please enter a valid message" : ""}
+            {...register("message", {
+              required: true,
+            })}
           />
         </Stack>
 
