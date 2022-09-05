@@ -12,7 +12,11 @@ export const Footer = () => {
       py={{ xs: 5, sm: 5 }}
       bgcolor="#c7ddcc"
       color="white"
-      sx={{ display: "flex", width: "100%" }}
+      sx={{
+        display: "flex",
+        width: "100%",
+        flexDirection: "column",
+      }}
     >
       <Container pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
         <Box textAlign="center">

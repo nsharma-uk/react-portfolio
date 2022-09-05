@@ -30,6 +30,10 @@ export const App = () => {
               label: "Contact",
               href: "/contact",
             },
+            {
+              label: "CV",
+              href: "/cv",
+            },
           ]}
         />
         <AppRoutes />

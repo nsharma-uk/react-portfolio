@@ -68,7 +68,7 @@ export const ProjectCard = ({ img, title, text, githubRepo, deployedPage }) => {
         }}
       >
         <Typography
-          gutterBottom
+          // gutterBottom
           variant="h6"
           sx={{
             backgroundColor: "  #c7ddcc",

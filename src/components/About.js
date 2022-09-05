@@ -4,7 +4,7 @@ import me from "../Assets/images/avatar.jpg";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-
+import Box from "@mui/material/Box";
 //import Box from "@mui/material/Box";
 export const About = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
@@ -30,21 +30,26 @@ export const About = () => {
           marginBottom: 4,
         }}
       />
-
-      <Typography
+      <Box
         variant="h6"
-        gutterBottom
         sx={{
           marginBottom: 4,
           paddingLeft: 6,
           paddingRight: 6,
         }}
       >
-        Hi, I'm Nayan and I'm a full stack developer. I am a former teacher who
-        wanted to pursue a new, fresh challenge, specifically a career in web
-        development. My technical skill set include MongoDB, Express.js, React,
-        Node.js, HTML5, CSS3, Javascript, MySQL and ApolloDB.
-      </Typography>
+        <Typography>
+          Hi, I'm Nayan and I'm a full stack developer. I retrained in order to
+          pursue a new, fresh challenge, specifically a career in web
+          development. My technical skill set include MongoDB, Express.js,
+          React, Node.js, HTML5, CSS3, Javascript, MySQL and ApolloDB.{" "}
+        </Typography>
+        <Typography sx={{ paddingTop: "15px" }}>
+          Other skills include problem solving, collaborative work as well as
+          productivity and time management skills through previous careers in
+          teaching and managing projects in the third sector.
+        </Typography>
+      </Box>
     </Stack>
   );
 };
