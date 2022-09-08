@@ -12,7 +12,7 @@ export const ProjectCards = () => {
     <Box
       sx={{
         paddingTop: "50px",
-        backgroundColor: "#abd699",
+        backgroundColor: "#75c9b7",
         textAlign: "center",
       }}
     >
@@ -21,8 +21,8 @@ export const ProjectCards = () => {
           component="h4"
           variant="h3"
           align="center"
-          sx={{ marginTop: 5, marginBottom: 3 }}
-          color="#75c9b7"
+          sx={{ marginTop: 10, marginBottom: 3 }}
+          color="#c7ddcc"
           fontWeight={600}
         >
           {" "}

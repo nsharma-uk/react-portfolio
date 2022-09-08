@@ -31,7 +31,7 @@ export const App = () => {
               href: "/contact",
             },
             {
-              label: "CV",
+              label: "Skills/CV",
               href: "/cv",
             },
           ]}
