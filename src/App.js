@@ -1,4 +1,4 @@
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 
 import { NavBar } from "./components/NavBar";
@@ -7,7 +7,7 @@ import { Footer } from "./components/Footer";
 
 export const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Stack sx={{ minHeight: "100vh" }} spacing={0}>
         <NavBar
           navItems={[
@@ -32,6 +32,6 @@ export const App = () => {
         <AppRoutes />
         <Footer />
       </Stack>
-    </Router>
+    </BrowserRouter>
   );
 };
