@@ -1,16 +1,9 @@
-//import { HashRouter as Router } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
-//import { ContactForm } from "./components/ContactForm";
-
-import { Footer } from "./components/Footer";
-//import { About } from "./components/About";
-
 import Stack from "@mui/material/Stack";
+
 import { NavBar } from "./components/NavBar";
-//import { ProjectCards } from "./components/ProjectCards";
 import { AppRoutes } from "./AppRoutes";
-//import { ProjectCards } from "./containers/ProjectCards";
-// import { ProjectCard } from "./components/ProjectCard";
+import { Footer } from "./components/Footer";
 
 export const App = () => {
   return (
@@ -37,8 +30,6 @@ export const App = () => {
           ]}
         />
         <AppRoutes />
-        {/* <ProjectCards />
-        <ContactForm /> */}
         <Footer />
       </Stack>
     </BrowserRouter>

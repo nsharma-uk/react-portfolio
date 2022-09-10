@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
-import { About } from "./components/About";
-import { ProjectCards } from "./components/ProjectCards";
 import { ContactForm } from "./components/ContactForm";
-import { CV } from "./components/CV";
+import { About } from "./containers/About";
+import { ProjectCards } from "./containers/ProjectCards";
+import { CV } from "./containers/CV";
 
 export const AppRoutes = () => {
   return (

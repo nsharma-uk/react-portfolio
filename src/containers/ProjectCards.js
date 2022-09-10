@@ -1,9 +1,9 @@
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
-
-import { ProjectCardInfo } from "./ProjectInfo";
-import { ProjectCard } from "./ProjectCard";
 import Typography from "@mui/material/Typography";
+
+import { ProjectCardInfo } from "../components/ProjectInfo";
+import { ProjectCard } from "../components/ProjectCard";
 
 export const ProjectCards = () => {
   const projects = ProjectCardInfo;
@@ -11,14 +11,14 @@ export const ProjectCards = () => {
   return (
     <Box
       sx={{
-        paddingTop: "50px",
+        p: 3,
         backgroundColor: "#75c9b7",
         textAlign: "center",
       }}
     >
       <Box sx={{ textAlign: "center" }} variant="h4" align="center">
         <Typography
-          component="h4"
+          component="h3"
           variant="h3"
           align="center"
           sx={{ marginTop: 10, marginBottom: 3 }}
@@ -30,7 +30,6 @@ export const ProjectCards = () => {
         </Typography>
       </Box>
       <Stack
-        // sx={{ backgroundColor: "  #abd699", textAlign: "center" }}
         direction="row"
         spacing={2}
         justifyContent="center"

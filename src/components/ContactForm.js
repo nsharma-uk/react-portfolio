@@ -1,5 +1,4 @@
 import * as React from "react";
-//import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -15,18 +14,6 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
-
-// const style = {
-//   // position: "absolute",
-//   // top: "50%",
-//   // left: "50%",
-//   transform: "translate(-50%, -50%)",
-//   width: "80%",
-//   bgcolor: "background.paper",
-//   border: "2px solid #000",
-//   boxShadow: 24,
-//   p: 4,
-//};
 
 export const ContactForm = ({ isMobile }) => {
   const [open, setOpen] = useState(false);
@@ -75,7 +62,7 @@ export const ContactForm = ({ isMobile }) => {
       }}
     >
       <Typography
-        component="h4"
+        component="h3"
         variant="h3"
         align="center"
         sx={{ marginTop: 10, marginBottom: 3 }}
@@ -100,16 +87,11 @@ export const ContactForm = ({ isMobile }) => {
           </DialogContent>
         </Dialog>
 
-        {/* <Box sx={style}>
-        
-      </Box> */}
-
         <Stack
           component="form"
           sx={{
             p: 3,
           }}
-          // submitForm={handleSubmit(submitForm)}
           ref={form}
         >
           <Typography component="h6" variant="h6" align="center">

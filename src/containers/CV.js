@@ -3,7 +3,6 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 
 export const CV = () => {
@@ -19,8 +18,8 @@ export const CV = () => {
       }}
     >
       <Typography
-        component="h4"
-        variant="h4"
+        component="h3"
+        variant="h3"
         align="center"
         sx={{ marginTop: 10, marginBottom: 3 }}
         color="#c7ddcc"
@@ -49,18 +48,17 @@ export const CV = () => {
               width: "4rem",
             }}
           >
-            <Link
+            <img
+              src={item.imgUrl}
+              srcSet={item.imgUrl}
               href={item.href}
               alt={item.name}
               key={item.name}
               target="_blank"
-            >
-              <img src={item.imgUrl} srcSet={item.imgUrl} alt={item.title} />{" "}
-            </Link>
+            />
           </ImageListItem>
         ))}
       </ImageList>
-      {/* </Grid> */}
       <Typography
         component="h5"
         variant="h5"

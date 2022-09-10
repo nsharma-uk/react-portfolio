@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-//import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const Footer = () => {
   return (
