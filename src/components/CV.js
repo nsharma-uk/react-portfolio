@@ -1,6 +1,6 @@
 import useMediaQuery from "@mui/material/useMediaQuery";
-import List from "@mui/material/ImageList";
-import ListItem from "@mui/material/ImageListItem";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
@@ -40,9 +40,9 @@ export const CV = () => {
         {" "}
         Frontend
       </Typography>
-      <List sx={{ width: "100%" }} direction="row" cols={12} component={Stack}>
+      <ImageList direction="row" cols={12} component={Stack}>
         {frontEndBadges.map((item) => (
-          <ListItem
+          <ImageListItem
             key={item.imgUrl}
             sx={{
               m: 4,
@@ -57,9 +57,9 @@ export const CV = () => {
             >
               <img src={item.imgUrl} srcSet={item.imgUrl} alt={item.title} />{" "}
             </Link>
-          </ListItem>
+          </ImageListItem>
         ))}
-      </List>
+      </ImageList>
       {/* </Grid> */}
       <Typography
         component="h5"
@@ -72,26 +72,31 @@ export const CV = () => {
         {" "}
         Backend
       </Typography>
-      <List sx={{ width: "100%" }} direction="row" cols={12} component={Stack}>
+      <ImageList
+        sx={{ width: "100%" }}
+        direction="row"
+        cols={12}
+        component={Stack}
+      >
         {backendEndBadges.map((item) => (
-          <ListItem
+          <ImageListItem
             key={item.imgUrl}
             sx={{
-              m: 4,
+              m: 3,
               width: "4rem",
             }}
           >
-            <Link
+            <img
+              src={item.imgUrl}
+              srcSet={item.imgUrl}
               href={item.href}
               alt={item.name}
               key={item.name}
               target="_blank"
-            >
-              <img src={item.imgUrl} srcSet={item.imgUrl} alt={item.title} />{" "}
-            </Link>
-          </ListItem>
+            />
+          </ImageListItem>
         ))}
-      </List>
+      </ImageList>
       <Typography
         component="h5"
         variant="h5"
@@ -105,7 +110,7 @@ export const CV = () => {
       </Typography>
       <Typography sx={{ color: "#16123f" }}>
         If you would like to view my full set of skills, projects and work
-        experience, you can download the CV from{" "}
+        history, you can download the CV from{" "}
         <a
           sx={{
             color: "#16123f",
@@ -136,6 +141,13 @@ const frontEndBadges = [
   },
 
   {
+    name: "Javascript",
+    imgUrl:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+
+  {
     name: "jQuery",
     imgUrl: "https://www.vectorlogo.zone/logos/jquery/jquery-vertical.svg",
     href: "https://jquery.com",
@@ -152,7 +164,7 @@ const frontEndBadges = [
     href: "https://handlebarsjs.com",
   },
   {
-    name: "Material UI",
+    name: "MaterialUI",
     imgUrl:
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg",
     href: "https://mui.com/",
@@ -165,38 +177,33 @@ const frontEndBadges = [
   },
   {
     name: "Bulma",
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bulma/bulma-plain.svg",
+    imgUrl:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/bulma/bulma-plain.svg",
     href: "https://bulma.io/",
   },
 ];
 
 const backendEndBadges = [
   {
-    name: "javascript",
-    imgUrl:
-      "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
-    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  },
-  {
-    name: "express",
+    name: "Express",
     imgUrl:
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
     href: "https://expressjs.com",
   },
   {
-    name: "node",
+    name: "Node",
     imgUrl:
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
     href: "https://nodejs.org",
   },
   {
-    name: "inquirer",
+    name: "Inquirer",
     imgUrl:
       "https://raw.githubusercontent.com/SBoudrias/Inquirer.js/master/assets/inquirer_readme.svg?sanitize=true",
     href: "https://www.npmjs.com/package/inquirer",
   },
   {
-    name: "restApi",
+    name: "REST APIs",
     imgUrl:
       "https://gitlab.com/uploads/-/system/project/avatar/9910889/875327.png?w=248&fit=crop&auto=format",
     href: "https://www.codecademy.com/article/what-is-rest",
@@ -208,18 +215,18 @@ const backendEndBadges = [
     href: "https://www.mysql.com/",
   },
   {
-    name: "sequelize",
+    name: "Sequelize",
     imgUrl:
       "https://www.vectorlogo.zone/logos/sequelizejs/sequelizejs-icon.svg",
     href: "https://sequelize.org",
   },
   {
-    name: "mongodb",
+    name: "MongoDB",
     imgUrl: "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg",
     href: "https://www.mongodb.com",
   },
   {
-    name: "graphql",
+    name: "Graphql",
     imgUrl: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
     href: "https://graphql.org",
   },
