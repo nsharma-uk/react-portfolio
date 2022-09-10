@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.33292f3b.css",
+    "main.js": "/react-portfolio/static/js/main.fa6b3fcb.js",
+    "static/media/eventwebpage.png": "/react-portfolio/static/media/eventwebpage.abc99086525ee3ca33fd.png",
+    "static/media/avatar.jpg": "/react-portfolio/static/media/avatar.30ba8b572bb3e42ac291.jpg",
+    "static/media/weatherdashboard.png": "/react-portfolio/static/media/weatherdashboard.e4180e5a8d82cbee75a3.png",
+    "static/media/workdayplannerwebpage.png": "/react-portfolio/static/media/workdayplannerwebpage.9885468d795e15efd4de.png",
+    "static/media/quizwebpage.png": "/react-portfolio/static/media/quizwebpage.a3f146f50bb4c9ccb2c7.png",
+    "static/media/notetaker.png": "/react-portfolio/static/media/notetaker.53791de574ec8e949feb.png",
+    "index.html": "/react-portfolio/index.html",
+    "main.33292f3b.css.map": "/react-portfolio/static/css/main.33292f3b.css.map",
+    "main.fa6b3fcb.js.map": "/react-portfolio/static/js/main.fa6b3fcb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33292f3b.css",
+    "static/js/main.fa6b3fcb.js"
+  ]
+}
