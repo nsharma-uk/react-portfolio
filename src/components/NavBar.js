@@ -12,10 +12,11 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
+import { useNavigate } from "react-router-dom";
 
 export const NavBar = ({ navItems }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
-
+  const navigate = useNavigate();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -35,7 +36,9 @@ export const NavBar = ({ navItems }) => {
                 color: "#16123f",
                 "&:hover": { color: "#75c9b7" },
               }}
-              href={item.href}
+              onClick={() => {
+                navigate(item.href);
+              }}
             >
               <ListItemText primary={item.label} />
             </ListItemButton>
@@ -71,7 +74,13 @@ export const NavBar = ({ navItems }) => {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item.label} sx={{ color: "#fff" }} href={item.href}>
+              <Button
+                key={item.label}
+                sx={{ color: "#fff" }}
+                onClick={() => {
+                  navigate(item.href);
+                }}
+              >
                 {item.label}
               </Button>
             ))}
