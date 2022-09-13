@@ -15,9 +15,14 @@ export const Footer = () => {
         display: "flex",
         width: "100%",
         flexDirection: "column",
+        flexWrap: "wrap",
       }}
     >
-      <Container pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
+      <Container
+        // pt={{ xs: 5, sm: 10 }}
+        // pb={{ xs: 5, sm: 0 }}
+        sx={{ width: "100%" }}
+      >
         <Box textAlign="center">
           <Link
             href="https://github.com/nsharma-uk"

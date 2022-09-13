@@ -59,6 +59,9 @@ export const ContactForm = ({ isMobile }) => {
         minWidth: isMobile ? "100%" : "400px",
         color: "#abd699",
         backgroundColor: "#75c9b7",
+        alignContent: "center",
+        justifyContent: "center",
+        flexWrap: "wrap",
       }}
     >
       <Typography
@@ -72,7 +75,7 @@ export const ContactForm = ({ isMobile }) => {
         {" "}
         Contact Me
       </Typography>
-      <Paper elevation={3} sx={{ margin: isMobile ? 2 : 8 }}>
+      <Paper elevation={3} sx={{ margin: isMobile ? 9 : 1 }}>
         <Dialog open={open} onClose={handleCloseModal}>
           <DialogTitle>Message sent</DialogTitle>
           <DialogContent>

@@ -17,6 +17,8 @@ export const About = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        paddingTop: isMobile ? 25 : 5,
+        paddingBottom: isMobile ? 5 : 5,
       }}
     >
       <Avatar
@@ -25,7 +27,7 @@ export const About = () => {
         sx={{
           width: isMobile ? 190 : 300,
           height: isMobile ? 190 : 300,
-          marginTop: 8,
+
           marginBottom: 4,
         }}
       />

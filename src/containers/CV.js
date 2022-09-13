@@ -15,6 +15,7 @@ export const CV = () => {
         minWidth: isMobile ? "100%" : "400px",
         color: "#abd699",
         backgroundColor: "#75c9b7",
+        paddingBottom: 12,
       }}
     >
       <Typography
@@ -59,6 +60,15 @@ export const CV = () => {
           </ImageListItem>
         ))}
       </ImageList>
+      <Typography
+        position="below"
+        sx={{
+          textAlign: "center",
+          color: "#16123f",
+          fontSize: "1rem",
+          paddingTop: "7px",
+        }}
+      ></Typography>
       <Typography
         component="h5"
         variant="h5"
@@ -113,8 +123,9 @@ export const CV = () => {
           sx={{
             color: "#16123f",
             textDecoration: "none",
+            "& :hover": { color: "#ffe26a" },
           }}
-          href="https://docs.google.com/document/d/1mSDsUxp0-DPyf1JI5M4ANfrJTz0b0XNQGDbn4h_YuLw/edit?usp=sharing"
+          href="https://drive.google.com/file/d/1dGqdtZhukJVO3K5juzl4JdFqD_DmriWW/view?usp=sharing"
         >
           here
         </a>

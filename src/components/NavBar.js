@@ -78,7 +78,7 @@ export const NavBar = ({ navItems }) => {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="nav">
+      <Box component="nav" sx={{}}>
         <Drawer
           variant="temporary"
           open={mobileOpen}
@@ -93,6 +93,7 @@ export const NavBar = ({ navItems }) => {
               boxSizing: "border-box",
               backgroundColor: "#c7ddcc",
               color: "#16123f",
+              alignItems: "left",
             },
           }}
           anchor="top"
