@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter as Router } from "react-router-dom";
+import Stack from "@mui/material/Stack";
 
-function App() {
+import { NavBar } from "./components/NavBar";
+import { AppRoutes } from "./AppRoutes";
+import { Footer } from "./components/Footer";
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Stack sx={{ minHeight: "100vh" }} spacing={0}>
+        <NavBar
+          navItems={[
+            {
+              label: "About Me",
+              href: "/",
+            },
+            {
+              label: "Projects",
+              href: "/project",
+            },
+            {
+              label: "Contact",
+              href: "/contact",
+            },
+            {
+              label: "Skills/CV",
+              href: "/cv",
+            },
+          ]}
+        />
+        <AppRoutes />
+        <Footer />
+      </Stack>
+    </Router>
   );
-}
-
-export default App;
+};
